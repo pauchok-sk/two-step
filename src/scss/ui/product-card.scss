@@ -1,0 +1,115 @@
+.product-card {
+  display: flex;
+  width: fit-content;
+  gap: 24px;
+  padding: 24px 32px;
+  border-radius: 16px;
+  background: var(--accent);
+  box-shadow: 0px 2px 15px 1px rgba(0, 0, 0, 0.15);
+
+  @include tablet {
+    flex-direction: column-reverse;
+    max-width: 320px;
+    width: 100%;
+    padding: 24px 16px;
+    margin: 0 auto;
+    gap: 16px;
+  }
+  &__title {
+    margin-bottom: 12px;
+    @include tablet {
+      margin-bottom: 0;
+      font-size: 20px;
+      line-height: 24px;
+    }
+  
+    &._desktop {
+      @include tablet {
+        display: none;
+      }
+    }
+    &._mobile {
+      display: none;
+      @include tablet {
+        display: block;
+      }
+    }
+  }
+  &__prices {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 24px;
+    @include tablet {
+      margin-bottom: 16px;
+    }
+  }
+  &__price {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 48px;
+    @include tablet {
+      font-weight: 600;
+    }
+  }
+  &__oldprice {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 40px;
+    color: rgba(255, 255, 255, 0.8);
+  
+    @include tablet {
+      font-weight: 500;
+    }
+  
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 0;
+      height: 4px;
+      background-color: currentColor;
+      border-radius: 24px;
+    }
+  }
+  &__btn {
+    width: 100%;
+  }
+  &__timer {
+    position: relative;
+    width: 145px;
+    flex-shrink: 0;
+    @include tablet {
+      width: 100%;
+    }
+  }
+  &__time {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -5px;
+    padding: 8px;
+    background-color: white;
+    border-radius: 12px;
+  
+    color: var(--accent);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+  }
+  &__timer-img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    @include tablet {
+      height: 130px;
+      object-position: top;
+    }
+  }
+}

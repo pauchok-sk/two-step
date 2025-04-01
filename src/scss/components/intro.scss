@@ -1,0 +1,139 @@
+.intro {
+  padding-bottom: 24px;
+  &__body {
+    position: relative;
+    border-radius: 16px;
+    padding: 40px 48px;
+    color: white;
+    background: var(
+      --gradient,
+      linear-gradient(
+        180deg,
+        #49434a 0%,
+        #787883 33.5%,
+        #9c9da8 69.5%,
+        #a5a3af 100%
+      )
+    );
+    box-shadow: 0px 4px 15px 1px rgba(24, 39, 81, 0.2);
+    z-index: 1;
+    overflow: hidden;
+    @include laptop-min {
+      padding-bottom: 275px;
+    }
+    @include tablet {
+      padding-right: 16px;
+      padding-left: 16px;
+      padding-top: 24px;
+    }
+  }
+  &__title {
+    max-width: 750px;
+    margin-bottom: 16px;
+    @include tablet {
+      font-size: 32px;
+      line-height: 40px;
+      margin-bottom: 24px;
+    }
+  }
+  &__wrapper-list {
+    max-width: 750px;
+  }
+  &__list-title {
+    margin-bottom: 16px;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    row-gap: 16px;
+    margin-bottom: 32px;
+    @include mobile {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    li {
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding-left: 40px;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 24px;
+      @include tablet {
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      &::before,
+      &::after {
+        position: absolute;
+        content: "";
+      }
+      &::before {
+        width: 22px;
+        height: 22px;
+        left: 1px;
+        background-color: white;
+        border-radius: 50%;
+        z-index: -1;
+      }
+      &::after {
+        left: 0;
+        width: 24px;
+        height: 24px;
+        background: url("@img/check.svg") 0 0 / 24px auto no-repeat;
+        z-index: 1;
+      }
+    }
+  }
+  &__womens {
+    position: absolute;
+    display: block;
+    right: -20px;
+    bottom: 0;
+    width: 625px;
+    z-index: -1;
+    @include laptop {
+      width: 515px;
+    }
+    @include laptop-middle {
+      width: 380px;
+    }
+    @include laptop-min {
+      width: 300px;
+      right: 50%;
+      transform: translateX(50%);
+    }
+  }
+  &__footer {
+    @include flex-between;
+    gap: 24px;
+    padding: 26px 32px;
+    background-color: var(--accent);
+    border-radius: 16px;
+    margin-top: 24px;
+    @include tablet-min {
+      flex-wrap: wrap;
+      padding: 16px;
+    }
+
+    .button {
+      flex-shrink: 0;
+      @include tablet-min {
+        width: 100%;
+      }
+    }
+  }
+  &__footer-content {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    margin: 0;
+    @include tablet-min {
+      width: 100%;
+    }
+  }
+}

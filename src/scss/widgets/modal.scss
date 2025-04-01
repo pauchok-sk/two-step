@@ -1,0 +1,61 @@
+.modal {
+  padding: 50px 70px;
+  border-radius: 16px;
+  width: 640px;
+  display: none;
+  max-width: calc(100vw - 20px);
+  @include tablet {
+    padding: 30px 20px;
+  }
+  &__close {
+    @include flex-center;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    transition: background-color .2s ease, color .2s ease;
+    @include hover {
+      color: white;
+      background-color: var(--accent);
+    }
+
+    svg {
+      width: 15px;
+      height: 15px;
+    }
+  }
+  &__title {
+    margin-bottom: 40px;
+    @include tablet {
+      margin-bottom: 32px;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  &__form-btn {
+    width: 100%;
+    min-height: 50px;
+  }
+  &__bottom-content {
+    text-align: center;
+    margin-top: 24px;
+
+    font-size: 16px;
+    line-height: 20px;
+
+    span {
+      cursor: pointer;
+      color: var(--accent);
+      @include hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
