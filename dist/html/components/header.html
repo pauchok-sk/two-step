@@ -1,0 +1,74 @@
+<header class="header">
+	<div class="container header__container">
+		<a href="/" class="header__logo">
+			<img src="img/logo.svg" alt="logo" class="header__logo-img" />
+		</a>
+		<nav class="header__nav">
+			<ul class="list header__list">
+				<li><a href="#about" data-anchor>Про курс</a></li>
+				<li><a href="#" data-anchor>Про нас</a></li>
+				<li><a href="#" data-anchor>Відгуки</a></li>
+			</ul>
+		</nav>
+		<div class="header__right">
+			<ul class="list header__social">
+				<li>
+					<a href="#" target="_blank" class="header__social-btn">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#icon-inst"></use>
+						</svg>
+					</a>
+				</li>
+				<li>
+					<a href="#" target="_blank" class="header__social-btn">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#icon-tg"></use>
+						</svg>
+					</a>
+				</li>
+			</ul>
+			<button data-fancybox data-src="#modal-login" class="button">Вхід</button>
+			<div class="header__burger-btn" id="burger-open">
+				<svg>
+					<use xlink:href="img/icons/icons.svg#icon-burger"></use>
+				</svg>
+			</div>
+		</div>
+	</div>
+</header>
+
+<div class="burger" id="burger">
+	<div class="burger__head">
+		<a href="/" class="burger__logo">
+			<img src="img/logo.svg" alt="logo" class="burger__logo-img" />
+		</a>
+		<button class="btn-reset burger__close" id="burger-close">
+			<svg>
+				<use xlink:href='img/icons/icons.svg#icon-close'></use>
+			</svg>
+		</button>
+	</div>
+	<ul class="list burger__list">
+		<li><a href="#about" data-anchor>Про курс</a></li>
+		<li><a href="#" data-anchor>Про нас</a></li>
+		<li><a href="#" data-anchor>Відгуки</a></li>
+	</ul>
+	<ul class="list burger__social">
+		<li>
+			<a href="#" target="_blank" class="burger__social-btn">
+				<svg>
+					<use xlink:href="img/icons/icons.svg#icon-inst"></use>
+				</svg>
+			</a>
+		</li>
+		<li>
+			<a href="#" target="_blank" class="burger__social-btn">
+				<svg>
+					<use xlink:href="img/icons/icons.svg#icon-tg"></use>
+				</svg>
+			</a>
+		</li>
+	</ul>
+	<button data-fancybox data-src="#modal-login" class="button burger__btn-login">Вхід</button>
+</div>
+<div class="burger-overlay" id="burger-overlay"></div>

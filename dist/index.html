@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Two Step</title>
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&_v=20250401222229" rel="stylesheet" />
+	<link rel="stylesheet" href="./files/css/fancybox.min.css?_v=20250401222229" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20250401222229" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="body">
+	<header class="header">
+		<div class="container header__container">
+			<a href="/" class="header__logo">
+				<img src="img/logo.svg" alt="logo" class="header__logo-img" />
+			</a>
+			<nav class="header__nav">
+				<ul class="list header__list">
+					<li><a href="#about" data-anchor>Про курс</a></li>
+					<li><a href="#" data-anchor>Про нас</a></li>
+					<li><a href="#" data-anchor>Відгуки</a></li>
+				</ul>
+			</nav>
+			<div class="header__right">
+				<ul class="list header__social">
+					<li>
+						<a href="#" target="_blank" class="header__social-btn">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-inst"></use>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#" target="_blank" class="header__social-btn">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-tg"></use>
+							</svg>
+						</a>
+					</li>
+				</ul>
+				<button data-fancybox data-src="#modal-login" class="button">Вхід</button>
+				<div class="header__burger-btn" id="burger-open">
+					<svg>
+						<use xlink:href="img/icons/icons.svg#icon-burger"></use>
+					</svg>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="burger" id="burger">
+		<div class="burger__head">
+			<a href="/" class="burger__logo">
+				<img src="img/logo.svg" alt="logo" class="burger__logo-img" />
+			</a>
+			<button class="btn-reset burger__close" id="burger-close">
+				<svg>
+					<use xlink:href='img/icons/icons.svg#icon-close'></use>
+				</svg>
+			</button>
+		</div>
+		<ul class="list burger__list">
+			<li><a href="#about" data-anchor>Про курс</a></li>
+			<li><a href="#" data-anchor>Про нас</a></li>
+			<li><a href="#" data-anchor>Відгуки</a></li>
+		</ul>
+		<ul class="list burger__social">
+			<li>
+				<a href="#" target="_blank" class="burger__social-btn">
+					<svg>
+						<use xlink:href="img/icons/icons.svg#icon-inst"></use>
+					</svg>
+				</a>
+			</li>
+			<li>
+				<a href="#" target="_blank" class="burger__social-btn">
+					<svg>
+						<use xlink:href="img/icons/icons.svg#icon-tg"></use>
+					</svg>
+				</a>
+			</li>
+		</ul>
+		<button data-fancybox data-src="#modal-login" class="button burger__btn-login">Вхід</button>
+	</div>
+	<div class="burger-overlay" id="burger-overlay"></div>
+
+	<main>
+
+		<section class="intro">
+			<div class="container">
+				<div class="intro__body">
+					<h2 class="s-title intro__title">
+						Ми знаємо як важко боротися з зайвою вагою! І як важко утримати цей
+						результат на довго.
+					</h2>
+					<div class="intro__wrapper-list">
+						<h4 class="f-title intro__list-title">Ми допоможемо тобі:</h4>
+						<ul class="list intro__list">
+							<li>схуднути</li>
+							<li>утримати вагу</li>
+							<li>набрати вагу</li>
+						</ul>
+					</div>
+					<div class="product-card">
+						<div class="product-card__info">
+							<h4 class="f-title product-card__title _desktop">
+								Знижка до початку курса
+							</h4>
+							<div class="product-card__prices">
+								<div class="product-card__price">14.99$</div>
+								<div class="product-card__oldprice">59.99$</div>
+							</div>
+							<a href="#" class="button _white product-card__btn">Почати зміни</a>
+						</div>
+						<div class="product-card__timer">
+							<div class="product-card__time" id="timer" data-date="04-22-2025">
+								02 : 56 : 16
+							</div>
+							<img src="img/time-img.jpg" alt="image" class="product-card__timer-img" />
+						</div>
+						<h4 class="f-title product-card__title _mobile">
+							Знижка до початку курса
+						</h4>
+					</div>
+					<img src="img/womens.png" alt="image" class="intro__womens" />
+				</div>
+
+				<div class="intro__footer">
+					<p class="intro__footer-content">
+						Забери подарунковий гайд «Основи здорової тарілки»
+					</p>
+					<a href="img/logo.svg" download class="button _outline-white">Завантажити</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="s-about sect" id="about">
+			<div class="container">
+				<div class="s-about__head">
+					<div class="s-about__wrapper-list">
+						<h2 class="t-title">Цей курс для вас, якщо ви:</h2>
+						<ul class="list s-about__list">
+							<li>
+								<span>01</span>
+								<span>Заїдаєте стрес;</span>
+							</li>
+							<li>
+								<span>02</span>
+								<span>Думаєте що у вас немає <br />
+									сили волі і нічого не вийде;</span>
+							</li>
+							<li>
+								<span>03</span>
+								<span>Ділите їжу на хорошу і погану;</span>
+							</li>
+							<li>
+								<span>04</span>
+								<span>Багато тренуєтесь і не худнете;</span>
+							</li>
+							<li>
+								<span>05</span>
+								<span>Картаєте себе в своїй <br />
+									«не ідеальності» і відчуваєте провину;</span>
+							</li>
+							<li>
+								<span>06</span>
+								<span>Розчаровані дієтами та марафонами;</span>
+							</li>
+							<li>
+								<span>07</span>
+								<span>«Правильно» харчуєтесь і не маєте результату;</span>
+							</li>
+							<li>
+								<span>08</span>
+								<span>Вам не подобається якість тіла і самопочуття.</span>
+							</li>
+						</ul>
+						<button data-fancybox data-src="#modal-login" class="button s-about__login-btn">
+							Зареєструватися
+						</button>
+					</div>
+					<img src="img/fruits.jpg" alt="image" class="s-about__head-img" />
+				</div>
+				<div class="s-about__bottom">
+					<a href="//github.com/mediaelement/mediaelement-files/blob/master/big_buck_bunny.mp4?raw=true" data-fancybox class="video">
+						<img src="img/about-preview.jpg" alt="image" class="video__preview" />
+						<button class="btn-reset video__btn"></button>
+						<div class="t-title">Пробне тренування</div>
+					</a>
+					<div class="s-about__bottom-info">
+						<div class="tag">Спробуйте безкоштовно</div>
+						<h3 class="t-title s-about__title">Пройдіть пробне тренування</h3>
+						<div class="s-about__bottom-content">
+							<h5>
+								Пробне жироспалювальне тренування на все тіло / курс «Здорове тіло»
+							</h5>
+							<p>
+								Пробне тренування — це приклад середнього навантаження курсу. Якщо
+								вам вдалося виконати 30-40% від уроку, ви точно зможете займатися на
+								курсі. Почнемо з простіших вправ.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+	</main>
+	<footer class="footer">
+		<div class="container">
+		</div>
+	</footer>
+	<div class="modal tab-container" id="modal-login">
+		<button data-fancybox-close class="btn-reset modal__close">
+			<svg>
+				<use xlink:href='img/icons/icons.svg#icon-close'></use>
+			</svg>
+		</button>
+		<div data-tab="login">
+			<h3 class="t-title modal__title">Зареєструватися</h3>
+			<form action="#" class="modal__form">
+				<div class="modal__form-item">
+					<input type="text" placeholder="Имя" class="input">
+				</div>
+				<div class="modal__form-item">
+					<input type="email" placeholder="Email" class="input">
+				</div>
+				<div class="modal__form-item">
+					<input type="password" placeholder="Пароль" class="input">
+				</div>
+				<button class="button modal__form-btn">Зареєструватися</button>
+			</form>
+			<div class="modal__bottom-content">Вже є акаунт <span data-tab-btn="reg">Увійти</span></div>
+		</div>
+		<div data-tab="reg" class="_open">
+			<h3 class="t-title modal__title">Увійти</h3>
+			<form action="#" class="modal__form">
+
+				<div class="modal__form-item">
+					<input type="email" placeholder="Email" class="input">
+				</div>
+				<div class="modal__form-item">
+					<input type="password" placeholder="Пароль" class="input">
+				</div>
+				<button class="button modal__form-btn">Увійти</button>
+			</form>
+			<div class="modal__bottom-content">Немає аккаунта? <span data-tab-btn="login">Зареєструватися</span></div>
+		</div>
+	</div>
+	<script src="./files/js/fancybox.min.js?_v=20250401222229"></script>
+	<script src="./files/js/countdown.min.js?_v=20250401222229"></script>
+	<script src="js/app.min.js?_v=20250401222229"></script>
+</body>
+
+</html>
