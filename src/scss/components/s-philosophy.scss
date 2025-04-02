@@ -1,0 +1,110 @@
+.s-philosophy {
+  &__container {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 32px;
+    @include laptop-middle {
+      flex-wrap: wrap;
+    }
+  }
+  &__head {
+    position: sticky;
+    top: 100px;
+    @include laptop-middle {
+      position: static;
+    }
+  }
+  &__title {
+    margin: 24px 0px 0px 0px;
+  }
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 640px;
+    width: 100%;
+    @include laptop-middle {
+      max-width: none;
+    }
+  }
+  &__spoller {
+    border-radius: 12px;
+    width: 100%;
+    border: 1px solid var(--accent);
+    overflow: hidden;
+  }
+  &__spoller-btn {
+    @include flex-between;
+    width: 100%;
+    padding: 16px 32px;
+
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease;
+    &._spoller-active {
+      background-color: var(--accent);
+      color: white;
+
+      .s-philosophy__spoller-circle {
+        background-color: transparent;
+        color: white;
+        transform: rotate(180deg);
+      }
+
+      & + .s-philosophy__spoller-body {
+        background-color: var(--accent);
+        color: white
+      }
+    }
+    @include tablet {
+      font-size: 20px;
+      line-height: 24px;
+      padding: 16px;
+    }
+  }
+  &__spoller-circle {
+    @include flex-center;
+    width: 32px;
+    height: 32px;
+    background-color: var(--accent-l);
+    border-radius: 50%;
+    color: var(--accent);
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease,
+      transform 0.2s ease;
+
+    @include tablet {
+      width: 24px;
+      height: 24px;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+      @include tablet {
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
+  &__spoller-body {
+    padding: 8px 32px 16px 32px;
+    font-size: 16px;
+    line-height: 20px;
+    @include tablet {
+      padding: 0px 16px 16px 16px;
+    }
+
+    p {
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+    }
+  }
+}

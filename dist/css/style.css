@@ -147,7 +147,8 @@ template {
   display: none
 }
 :root {
-  --accent: #4575fa
+  --accent: #4575fa;
+  --accent-l: #f3f6ff
 }
 html {
   box-sizing: border-box
@@ -922,6 +923,122 @@ body {
   line-height: 20px;
   margin: 0 0 24px 0
 }
+.s-mentors__adv {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 30px;
+  margin-top: 56px
+}
+.s-mentors__adv-item {
+  background-color: var(--accent);
+  color: #fff;
+  padding: 24px 16px;
+  border-radius: 12px;
+  grid-column: 1 span
+}
+.s-mentors__adv-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px
+}
+.s-mentors__adv-title {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
+  margin: 0
+}
+.s-mentors__adv-num {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px
+}
+.s-mentors__adv-content {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  margin: 0
+}
+.s-philosophy__container {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 32px
+}
+.s-philosophy__head {
+  position: sticky;
+  top: 100px
+}
+.s-philosophy__title {
+  margin: 24px 0 0 0
+}
+.s-philosophy__main {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 640px;
+  width: 100%
+}
+.s-philosophy__spoller {
+  border-radius: 12px;
+  width: 100%;
+  border: 1px solid var(--accent);
+  overflow: hidden
+}
+.s-philosophy__spoller-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px 32px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  transition: color .2s ease,background-color .2s ease
+}
+.s-philosophy__spoller-btn._spoller-active {
+  background-color: var(--accent);
+  color: #fff
+}
+.s-philosophy__spoller-btn._spoller-active .s-philosophy__spoller-circle {
+  background-color: rgba(0,0,0,0);
+  color: #fff;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg)
+}
+.s-philosophy__spoller-btn._spoller-active+.s-philosophy__spoller-body {
+  background-color: var(--accent);
+  color: #fff
+}
+.s-philosophy__spoller-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: var(--accent-l);
+  border-radius: 50%;
+  color: var(--accent);
+  transition: color .2s ease,background-color .2s ease,-webkit-transform .2s ease;
+  transition: color .2s ease,background-color .2s ease,transform .2s ease;
+  transition: color .2s ease,background-color .2s ease,transform .2s ease,-webkit-transform .2s ease
+}
+.s-philosophy__spoller-circle svg {
+  width: 20px;
+  height: 20px
+}
+.s-philosophy__spoller-body {
+  padding: 8px 32px 16px 32px;
+  font-size: 16px;
+  line-height: 20px
+}
+.s-philosophy__spoller-body p {
+  margin: 0
+}
+.s-philosophy__spoller-body p:not(:last-child) {
+  margin-bottom: 12px
+}
 @media (max-width:1340px) {
   .intro__womens {
     width: 515px
@@ -941,6 +1058,18 @@ body {
   }
   .s-about__head-img {
     width: 50%
+  }
+  .s-mentors__adv-item {
+    grid-column: 2 span
+  }
+  .s-philosophy__container {
+    flex-wrap: wrap
+  }
+  .s-philosophy__head {
+    position: static
+  }
+  .s-philosophy__main {
+    max-width: none
   }
 }
 @media (max-width:991px) {
@@ -1096,6 +1225,29 @@ body {
   .s-mentors__item::before {
     background: linear-gradient(180deg,rgba(0,0,0,.25) 64.22%,rgba(0,0,0,.8) 100%)
   }
+  .s-mentors__adv {
+    gap: 16px
+  }
+  .s-mentors__adv-title {
+    font-size: 24px;
+    line-height: 32px
+  }
+  .s-philosophy__spoller-btn {
+    font-size: 20px;
+    line-height: 24px;
+    padding: 16px
+  }
+  .s-philosophy__spoller-circle {
+    width: 24px;
+    height: 24px
+  }
+  .s-philosophy__spoller-circle svg {
+    width: 14px;
+    height: 14px
+  }
+  .s-philosophy__spoller-body {
+    padding: 0 16px 16px 16px
+  }
 }
 @media (max-width:575px) {
   .intro__footer {
@@ -1113,6 +1265,9 @@ body {
   }
   .s-about__head-img {
     height: 300px
+  }
+  .s-mentors__adv-item {
+    grid-column: 4 span
   }
 }
 @media (max-width:480px) {
@@ -1134,6 +1289,9 @@ body {
   .s-mentors__item {
     aspect-ratio: inherit;
     min-height: 410px
+  }
+  .s-mentors__item-btn {
+    width: 100%
   }
 }
 @media (any-hover:hover) {

@@ -84,5 +84,56 @@
     margin: 0px 0px 24px 0px;
   }
   &__item-btn {
+    @include mobile {
+      width: 100%;
+    }
+  }
+  &__adv {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 56px;
+    @include tablet {
+      gap: 16px;
+    }
+  }
+  &__adv-item {
+    background-color: var(--accent);
+    color: white;
+    padding: 24px 16px;
+    border-radius: 12px;
+    grid-column: 1 span;
+    @include laptop-middle {
+      grid-column: 2 span;
+    }
+    @include tablet-min {
+      grid-column: 4 span;
+    }
+  }
+  &__adv-head {
+    @include flex-between;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  &__adv-title {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 40px;
+    margin: 0;
+    @include tablet {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+  &__adv-num {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+  &__adv-content {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    margin: 0;
   }
 }
