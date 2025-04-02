@@ -262,6 +262,7 @@ body {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  color: #fff;
   gap: 24px;
   padding: 24px 32px;
   border-radius: 16px;
@@ -1039,9 +1040,44 @@ body {
 .s-philosophy__spoller-body p:not(:last-child) {
   margin-bottom: 12px
 }
+.s-offer__body {
+  position: relative;
+  padding: 45px;
+  color: #fff;
+  overflow: hidden;
+  box-shadow: 0 4px 15px 1px rgba(24,39,81,.2);
+  border-radius: 16px;
+  background: linear-gradient(270deg,rgba(0,0,0,.5) 31.29%,rgba(0,0,0,.4) 100%);
+  z-index: 1
+}
+.s-offer__main {
+  margin-bottom: 24px;
+  max-width: 530px
+}
+.s-offer__title {
+  margin-bottom: 12px
+}
+.s-offer__content {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  margin: 0
+}
+.s-offer__img {
+  position: absolute;
+  top: -145px;
+  right: 0;
+  width: 740px;
+  z-index: -1
+}
 @media (max-width:1340px) {
   .intro__womens {
     width: 515px
+  }
+  .s-offer__img {
+    top: auto;
+    width: 350px;
+    bottom: 0
   }
 }
 @media (max-width:1200px) {
@@ -1118,6 +1154,16 @@ body {
   }
   .s-mentors__item {
     padding: 16px
+  }
+  .s-offer__body {
+    padding: 32px 16px 275px 16px
+  }
+  .s-offer__img {
+    width: 350px;
+    right: 50%;
+    bottom: -40px;
+    -webkit-transform: translateX(50%);
+    transform: translateX(50%)
   }
 }
 @media (max-width:767px) {
@@ -1247,6 +1293,12 @@ body {
   }
   .s-philosophy__spoller-body {
     padding: 0 16px 16px 16px
+  }
+  .s-offer__title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    margin-bottom: 12px
   }
 }
 @media (max-width:575px) {

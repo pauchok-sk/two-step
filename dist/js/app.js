@@ -255,22 +255,23 @@
         }));
     }
     function timer() {
-        const timer = document.querySelector("#timer");
-        if (timer) {
+        const timers = document.querySelectorAll(".product-card__time");
+        if (timers.length) timers.forEach((timer => {
             const dataDate = timer.dataset.date;
+            console.log(dataDate);
             const endTime = new Date(dataDate);
             let interval;
             function updateTimer() {
                 const timeLeft = countdown(endTime);
                 timer.innerHTML = `${timeLeft.days} : ${timeLeft.hours} : ${timeLeft.minutes} : ${timeLeft.seconds}`;
                 if (endTime - new Date <= 0) {
-                    document.getElementById("timer").innerHTML = "Время вышло!";
+                    timer.innerHTML = "Время вышло!";
                     clearInterval(interval);
                 }
             }
             updateTimer();
             interval = setInterval(updateTimer, 1e3);
-        }
+        }));
     }
     Fancybox.bind("[data-fancybox]", {
         closeButton: false
