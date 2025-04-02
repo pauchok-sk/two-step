@@ -197,7 +197,7 @@ body {
   cursor: pointer;
   border-radius: 100px;
   background-color: var(--accent);
-  padding: 12px 40px;
+  padding: 14px 40px;
   border: none;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -500,11 +500,14 @@ body {
   visibility: visible
 }
 .modal {
-  padding: 50px 70px;
+  padding: 32px;
   border-radius: 16px;
   width: 640px;
   display: none;
   max-width: calc(100vw - 20px)
+}
+.modal._big {
+  width: 1345px
 }
 .modal__close {
   display: flex;
@@ -545,6 +548,93 @@ body {
 .modal__bottom-content span {
   cursor: pointer;
   color: var(--accent)
+}
+.mentor {
+  display: flex;
+  gap: 56px
+}
+.mentor__img {
+  width: 580px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  border-radius: 16px
+}
+.mentor__info {
+  flex: 1
+}
+.mentor__title {
+  padding-left: 40px
+}
+.mentor__list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 1
+}
+.mentor__list::before {
+  position: absolute;
+  content: "";
+  left: 11px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  border-left: 1px dashed var(--accent);
+  z-index: -1
+}
+.mentor__item {
+  display: flex;
+  align-items: start;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  gap: 16px
+}
+.mentor__item:last-child {
+  align-items: end
+}
+.mentor__item-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 14px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  color: var(--accent);
+  flex-shrink: 0;
+  background-color: #fff;
+  border: 1px solid var(--accent)
+}
+.mentor__footer {
+  padding-left: 40px;
+  margin-top: 24px
+}
+.mentor__social-title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0 0 16px 0
+}
+.mentor__socials {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 16px;
+  gap: 12px
+}
+.mentor__socials a {
+  display: block;
+  width: 32px;
+  height: 32px;
+  color: var(--accent);
+  transition: opacity .2s ease
+}
+.mentor__socials a svg {
+  width: 100%;
+  height: 100%
 }
 .header {
   position: sticky;
@@ -774,12 +864,78 @@ body {
 .s-about__bottom-content p:not(:last-child) {
   margin-bottom: 20px
 }
+.s-mentors__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 32px
+}
+.s-mentors__head .t-title {
+  margin: 0
+}
+.s-mentors__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 32px
+}
+.s-mentors__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  position: relative;
+  grid-column: 1 span;
+  border-radius: 16px;
+  overflow: hidden;
+  color: #fff;
+  padding: 32px;
+  aspect-ratio: 1/1;
+  z-index: 1
+}
+.s-mentors__item::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background: linear-gradient(180deg,rgba(0,0,0,.05) 64.22%,rgba(0,0,0,.5) 100%);
+  z-index: -1
+}
+.s-mentors__item-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  z-index: -2
+}
+.s-mentors__info {
+  max-width: 285px
+}
+.s-mentors__title {
+  margin-bottom: 16px
+}
+.s-mentors__item-content {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  margin: 0 0 24px 0
+}
 @media (max-width:1340px) {
   .intro__womens {
     width: 515px
   }
 }
 @media (max-width:1200px) {
+  .mentor {
+    flex-wrap: wrap;
+    justify-content: center
+  }
+  .mentor__info {
+    flex: none;
+    width: 100%
+  }
   .intro__womens {
     width: 380px
   }
@@ -827,6 +983,12 @@ body {
   .s-about__head-img {
     width: 100%;
     height: 450px
+  }
+  .s-mentors__wrapper {
+    gap: 20px
+  }
+  .s-mentors__item {
+    padding: 16px
   }
 }
 @media (max-width:767px) {
@@ -876,10 +1038,16 @@ body {
     padding: 16px
   }
   .modal {
-    padding: 30px 20px
+    padding: 45px 20px 30px 20px
   }
   .modal__title {
     margin-bottom: 32px
+  }
+  .mentor__title {
+    padding: 0
+  }
+  .mentor__footer {
+    padding: 0
   }
   .header {
     padding: 20px 0
@@ -919,6 +1087,15 @@ body {
   .s-about__title {
     margin-bottom: 24px
   }
+  .s-mentors__wrapper {
+    gap: 32px
+  }
+  .s-mentors__item {
+    grid-column: 2 span
+  }
+  .s-mentors__item::before {
+    background: linear-gradient(180deg,rgba(0,0,0,.25) 64.22%,rgba(0,0,0,.8) 100%)
+  }
 }
 @media (max-width:575px) {
   .intro__footer {
@@ -943,12 +1120,20 @@ body {
     width: 345px;
     min-height: 250px
   }
+  .modal__close {
+    top: 10px;
+    right: 10px
+  }
   .header__logo {
     width: 140px
   }
   .intro__list {
     flex-direction: column;
     gap: 10px
+  }
+  .s-mentors__item {
+    aspect-ratio: inherit;
+    min-height: 410px
   }
 }
 @media (any-hover:hover) {
@@ -977,6 +1162,9 @@ body {
   }
   .modal__bottom-content span:hover {
     text-decoration: underline
+  }
+  .mentor__socials a:hover {
+    opacity: .6
   }
   .header__list a:hover::before {
     right: 0
@@ -1011,6 +1199,9 @@ body {
   }
   .modal__bottom-content span:active {
     text-decoration: underline
+  }
+  .mentor__socials a:active {
+    opacity: .6
   }
   .header__list a:active::before {
     right: 0

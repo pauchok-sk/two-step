@@ -8,7 +8,7 @@ import timer from "./files/timer.js";
 Fancybox.bind("[data-fancybox]", {
   closeButton: false,
 });
-// Fancybox.show([{ src: "#modal-login", type: "inline" }]);
+// Fancybox.show([{ src: "#modal-mentor-1", type: "inline" }]);
 
 spoller();
 burger();

@@ -8,9 +8,9 @@
 	<link rel="shortcut icon" href="favicon.ico" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&_v=20250401224858" rel="stylesheet" />
-	<link rel="stylesheet" href="./files/css/fancybox.min.css?_v=20250401224858" />
-	<link rel="stylesheet" href="css/style.min.css?_v=20250401224858" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&_v=20250402110611" rel="stylesheet" />
+	<link rel="stylesheet" href="./files/css/fancybox.min.css?_v=20250402110611" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20250402110611" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
@@ -211,6 +211,43 @@
 			</div>
 		</section>
 
+		<section class="sect s-mentors">
+			<div class="container">
+				<div class="s-mentors__head">
+					<h2 class="t-title">Надихаємо на зміни</h2>
+					<div class="tag">Про нас</div>
+				</div>
+				<div class="s-mentors__wrapper">
+					<div class="s-mentors__item">
+						<img src="img/mentor-1.jpg" alt="image" class="s-mentors__item-img" />
+						<div class="s-mentors__info">
+							<h3 class="t-title s-mentors__title">Нутріціолог</h3>
+							<p class="s-mentors__item-content">
+								Персональне введення, індивідуальний підхід, робота не тільки з
+								тарілкою а й з мисленням»
+							</p>
+							<button data-fancybox data-src="#modal-mentor-1" class="button s-mentors__item-btn">
+								Докладніше
+							</button>
+						</div>
+					</div>
+					<div class="s-mentors__item">
+						<img src="img/mentor-2.jpg" alt="image" class="s-mentors__item-img" />
+						<div class="s-mentors__info">
+							<h3 class="t-title s-mentors__title">Тренер</h3>
+							<p class="s-mentors__item-content">
+								Індивідуальні тренування, персональні програми і правильна техніка
+								виконання
+							</p>
+							<button data-fancybox data-src="#modal-mentor-1" class="button s-mentors__item-btn">
+								Докладніше
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
 
 	</main>
 	<footer class="footer">
@@ -220,43 +257,114 @@
 	<div class="modal tab-container" id="modal-login">
 		<button data-fancybox-close class="btn-reset modal__close">
 			<svg>
-				<use xlink:href='img/icons/icons.svg#icon-close'></use>
+				<use xlink:href="img/icons/icons.svg#icon-close"></use>
 			</svg>
 		</button>
 		<div data-tab="login">
 			<h3 class="t-title modal__title">Зареєструватися</h3>
 			<form action="#" class="modal__form">
 				<div class="modal__form-item">
-					<input type="text" placeholder="Имя" class="input">
+					<input type="text" placeholder="Имя" class="input" />
 				</div>
 				<div class="modal__form-item">
-					<input type="email" placeholder="Email" class="input">
+					<input type="email" placeholder="Email" class="input" />
 				</div>
 				<div class="modal__form-item">
-					<input type="password" placeholder="Пароль" class="input">
+					<input type="password" placeholder="Пароль" class="input" />
 				</div>
 				<button class="button modal__form-btn">Зареєструватися</button>
 			</form>
-			<div class="modal__bottom-content">Вже є акаунт <span data-tab-btn="reg">Увійти</span></div>
+			<div class="modal__bottom-content">
+				Вже є акаунт <span data-tab-btn="reg">Увійти</span>
+			</div>
 		</div>
 		<div data-tab="reg" class="_open">
 			<h3 class="t-title modal__title">Увійти</h3>
 			<form action="#" class="modal__form">
-
 				<div class="modal__form-item">
-					<input type="email" placeholder="Email" class="input">
+					<input type="email" placeholder="Email" class="input" />
 				</div>
 				<div class="modal__form-item">
-					<input type="password" placeholder="Пароль" class="input">
+					<input type="password" placeholder="Пароль" class="input" />
 				</div>
 				<button class="button modal__form-btn">Увійти</button>
 			</form>
-			<div class="modal__bottom-content">Немає аккаунта? <span data-tab-btn="login">Зареєструватися</span></div>
+			<div class="modal__bottom-content">
+				Немає аккаунта? <span data-tab-btn="login">Зареєструватися</span>
+			</div>
 		</div>
 	</div>
-	<script src="./files/js/fancybox.min.js?_v=20250401224858"></script>
-	<script src="./files/js/countdown.min.js?_v=20250401224858"></script>
-	<script src="js/app.min.js?_v=20250401224858"></script>
+
+	<div class="modal _big" id="modal-mentor-1">
+		<button data-fancybox-close class="btn-reset modal__close">
+			<svg>
+				<use xlink:href="img/icons/icons.svg#icon-close"></use>
+			</svg>
+		</button>
+		<div class="mentor">
+			<img src="img/mentor-1.jpg" alt="image" class="mentor__img" />
+			<div class="mentor__info">
+				<h3 class="t-title mentor__title">
+					Привіт! Я Ірина Березюк, сертифікований нутриціолог
+				</h3>
+				<ul class="list mentor__list">
+					<li class="mentor__item">
+						<span class="mentor__item-circle">1</span>
+						Я навчалася і досі продовжую це робити, в Академії dr Толстікової. Там
+						я здобула глибокі знання про нутриціологію та всю роботу організму.
+					</li>
+					<li class="mentor__item">
+						<span class="mentor__item-circle">2</span>
+						Але насправді мій шлях почався 10 років тому, коли я завагітніла, я
+						почала досліджувати, як харчування впливає на здоров’я, і тоді
+						зрозуміла: правильне харчування — це не просто про їжу, а про якість
+						життя
+					</li>
+					<li class="mentor__item">
+						<span class="mentor__item-circle">3</span>
+						З роками я ще більше заглибилася в нутріціологію, здобула освіту в цій
+						сфері та зрозуміла головне: універсальних схем не існує. Кожен
+						організм унікальний, і важливо знайти свій баланс.
+					</li>
+					<li class="mentor__item">
+						<span class="mentor__item-circle">4</span>
+						Я допомогла сотням людей схуднути, покращити стан тіла, навчитися
+						поєднувати харчування та спорт і віднайти баланс між здоров’ям,
+						фігурою та самопочуттям.
+					</li>
+					<li class="mentor__item">
+						<span class="mentor__item-circle">5</span>
+						Правильне харчування — це не тільки про цифри на вагах. Це про
+						енергію, здоров’я, гармонію з тілом та любов до себе. Якщо ви хочете
+						знайти свій ідеальний шлях без жорстких обмежень — я допоможу
+					</li>
+				</ul>
+				<div class="mentor__footer">
+					<h5 class="mentor__social-title">Мои соцсети</h5>
+					<ul class="list mentor__socials">
+						<li>
+							<a href="#" target="_blank">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-inst"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" target="_blank">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-tg"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./files/js/fancybox.min.js?_v=20250402110611"></script>
+	<script src="./files/js/countdown.min.js?_v=20250402110611"></script>
+	<script src="js/app.min.js?_v=20250402110611"></script>
 </body>
 
 </html>

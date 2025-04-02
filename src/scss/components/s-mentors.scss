@@ -1,0 +1,88 @@
+.s-mentors {
+  &__head {
+    @include flex-between;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 32px;
+
+    .t-title {
+      margin: 0;
+    }
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    @include laptop-min {
+      gap: 20px;
+    }
+    @include tablet {
+      gap: 32px;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    position: relative;
+    grid-column: 1 span;
+    border-radius: 16px;
+    overflow: hidden;
+    color: white;
+    padding: 32px;
+    aspect-ratio: 1/1;
+    z-index: 1;
+    @include laptop-min {
+      padding: 16px;
+    }
+    @include tablet {
+      grid-column: 2 span;
+    }
+    @include mobile {
+      aspect-ratio: inherit;
+      min-height: 410px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.05) 64.22%,
+        rgba(0, 0, 0, 0.5) 100%
+      );
+      z-index: -1;
+      @include tablet {
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.25) 64.22%,
+          rgba(0, 0, 0, 0.8) 100%
+        );
+      }
+    }
+  }
+  &__item-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+  }
+  &__info {
+    max-width: 285px;
+  }
+  &__title {
+    margin-bottom: 16px;
+  }
+  &__item-content {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    margin: 0px 0px 24px 0px;
+  }
+  &__item-btn {
+  }
+}

@@ -1,37 +1,107 @@
 <div class="modal tab-container" id="modal-login">
 	<button data-fancybox-close class="btn-reset modal__close">
 		<svg>
-			<use xlink:href='img/icons/icons.svg#icon-close'></use>
+			<use xlink:href="img/icons/icons.svg#icon-close"></use>
 		</svg>
 	</button>
 	<div data-tab="login">
 		<h3 class="t-title modal__title">Зареєструватися</h3>
 		<form action="#" class="modal__form">
 			<div class="modal__form-item">
-				<input type="text" placeholder="Имя" class="input">
+				<input type="text" placeholder="Имя" class="input" />
 			</div>
 			<div class="modal__form-item">
-				<input type="email" placeholder="Email" class="input">
+				<input type="email" placeholder="Email" class="input" />
 			</div>
 			<div class="modal__form-item">
-				<input type="password" placeholder="Пароль" class="input">
+				<input type="password" placeholder="Пароль" class="input" />
 			</div>
 			<button class="button modal__form-btn">Зареєструватися</button>
 		</form>
-		<div class="modal__bottom-content">Вже є акаунт <span data-tab-btn="reg">Увійти</span></div>
+		<div class="modal__bottom-content">
+			Вже є акаунт <span data-tab-btn="reg">Увійти</span>
+		</div>
 	</div>
 	<div data-tab="reg" class="_open">
 		<h3 class="t-title modal__title">Увійти</h3>
 		<form action="#" class="modal__form">
-
 			<div class="modal__form-item">
-				<input type="email" placeholder="Email" class="input">
+				<input type="email" placeholder="Email" class="input" />
 			</div>
 			<div class="modal__form-item">
-				<input type="password" placeholder="Пароль" class="input">
+				<input type="password" placeholder="Пароль" class="input" />
 			</div>
 			<button class="button modal__form-btn">Увійти</button>
 		</form>
-		<div class="modal__bottom-content">Немає аккаунта? <span data-tab-btn="login">Зареєструватися</span></div>
+		<div class="modal__bottom-content">
+			Немає аккаунта? <span data-tab-btn="login">Зареєструватися</span>
+		</div>
+	</div>
+</div>
+
+<div class="modal _big" id="modal-mentor-1">
+	<button data-fancybox-close class="btn-reset modal__close">
+		<svg>
+			<use xlink:href="img/icons/icons.svg#icon-close"></use>
+		</svg>
+	</button>
+	<div class="mentor">
+		<img src="img/mentor-1.jpg" alt="image" class="mentor__img" />
+		<div class="mentor__info">
+			<h3 class="t-title mentor__title">
+				Привіт! Я Ірина Березюк, сертифікований нутриціолог
+			</h3>
+			<ul class="list mentor__list">
+				<li class="mentor__item">
+					<span class="mentor__item-circle">1</span>
+					Я навчалася і досі продовжую це робити, в Академії dr Толстікової. Там
+					я здобула глибокі знання про нутриціологію та всю роботу організму.
+				</li>
+				<li class="mentor__item">
+					<span class="mentor__item-circle">2</span>
+					Але насправді мій шлях почався 10 років тому, коли я завагітніла, я
+					почала досліджувати, як харчування впливає на здоров’я, і тоді
+					зрозуміла: правильне харчування — це не просто про їжу, а про якість
+					життя
+				</li>
+				<li class="mentor__item">
+					<span class="mentor__item-circle">3</span>
+					З роками я ще більше заглибилася в нутріціологію, здобула освіту в цій
+					сфері та зрозуміла головне: універсальних схем не існує. Кожен
+					організм унікальний, і важливо знайти свій баланс.
+				</li>
+				<li class="mentor__item">
+					<span class="mentor__item-circle">4</span>
+					Я допомогла сотням людей схуднути, покращити стан тіла, навчитися
+					поєднувати харчування та спорт і віднайти баланс між здоров’ям,
+					фігурою та самопочуттям.
+				</li>
+				<li class="mentor__item">
+					<span class="mentor__item-circle">5</span>
+					Правильне харчування — це не тільки про цифри на вагах. Це про
+					енергію, здоров’я, гармонію з тілом та любов до себе. Якщо ви хочете
+					знайти свій ідеальний шлях без жорстких обмежень — я допоможу
+				</li>
+			</ul>
+			<div class="mentor__footer">
+				<h5 class="mentor__social-title">Мои соцсети</h5>
+				<ul class="list mentor__socials">
+					<li>
+						<a href="#" target="_blank">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-inst"></use>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#" target="_blank">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-tg"></use>
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
 	</div>
 </div>
