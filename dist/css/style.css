@@ -1070,6 +1070,72 @@ body {
   width: 740px;
   z-index: -1
 }
+.s-steps__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  row-gap: 56px
+}
+.s-steps__info {
+  display: flex;
+  flex-direction: column
+}
+.s-steps__title {
+  max-width: 520px;
+  margin-top: 24px
+}
+.s-steps__btn {
+  width: 245px
+}
+.s-steps__list {
+  position: relative;
+  padding-top: 20px;
+  margin-top: auto;
+  display: flex;
+  gap: 56px
+}
+.s-steps__list::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--accent);
+  top: 30px
+}
+.s-steps__item {
+  position: relative;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px
+}
+.s-steps__item:last-child .s-steps__num {
+  margin-left: auto
+}
+.s-steps__item:not(:first-child) .s-steps__num::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: -26px;
+  background: url(../img/arrow.svg) 0 0/100% auto no-repeat;
+  width: 10px;
+  height: 20px
+}
+.s-steps__num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 56px;
+  height: 24px;
+  border-radius: 100px;
+  border: 1px solid var(--accent);
+  background: #fff;
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 16px
+}
 @media (max-width:1340px) {
   .intro__womens {
     width: 515px
@@ -1164,6 +1230,32 @@ body {
     bottom: -40px;
     -webkit-transform: translateX(50%);
     transform: translateX(50%)
+  }
+  .s-steps__container {
+    flex-direction: column-reverse
+  }
+  .s-steps__container .video {
+    width: 100%
+  }
+  .s-steps__list {
+    padding-top: 0;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 32px
+  }
+  .s-steps__list::before {
+    display: none
+  }
+  .s-steps__item {
+    display: flex;
+    align-items: center;
+    gap: 16px
+  }
+  .s-steps__item:last-child .s-steps__num {
+    margin-left: 0
+  }
+  .s-steps__num {
+    margin: 0
   }
 }
 @media (max-width:767px) {
@@ -1302,6 +1394,10 @@ body {
   }
 }
 @media (max-width:575px) {
+  .video .t-title {
+    font-size: 20px;
+    line-height: normal
+  }
   .intro__footer {
     flex-wrap: wrap;
     padding: 16px
@@ -1343,6 +1439,9 @@ body {
     min-height: 410px
   }
   .s-mentors__item-btn {
+    width: 100%
+  }
+  .s-steps__btn {
     width: 100%
   }
 }

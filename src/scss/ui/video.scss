@@ -62,5 +62,9 @@
 
   .t-title {
     margin: 0;
+    @include tablet-min {
+      font-size: 20px;
+      line-height: normal;
+    }
   }
 }
