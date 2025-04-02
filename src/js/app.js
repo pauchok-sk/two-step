@@ -1,6 +1,8 @@
 import "../scss/style.scss";
 import anchor from "./files/anchors.js";
 import burger from "./files/burger.js";
+import faqAll from "./files/faqAll.js";
+import sliders from "./files/sliders.js";
 import spoller from "./files/spoller.js";
 import tab from "./files/tab.js";
 import timer from "./files/timer.js";
@@ -15,3 +17,5 @@ burger();
 tab();
 timer();
 anchor();
+sliders();
+faqAll();

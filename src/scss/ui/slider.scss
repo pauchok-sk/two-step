@@ -1,0 +1,48 @@
+.slider-pagination {
+  @include flex-center;
+  width: fit-content !important;
+  gap: 8px;
+
+  .swiper-pagination-bullet {
+    margin: 0 !important;
+    opacity: 1 !important;
+    background-color: rgba(69, 117, 250, 0.50);
+    transition: background-color .2s ease;
+
+    &.swiper-pagination-bullet-active {
+      background-color: var(--accent);
+    }
+  }
+}
+.slider-btn {
+  @include flex-center;
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--accent);
+  background-color: transparent;
+
+  color: var(--accent);
+
+  transition: color .2s ease, background-color .2s ease;
+
+  @include hover {
+    background-color: var(--accent);
+    color: white;
+  }
+
+  &._next {
+    transform: rotate(180deg);
+  }
+
+  &.swiper-button-disabled {
+    pointer-events: none;
+    opacity: 0.6;
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}

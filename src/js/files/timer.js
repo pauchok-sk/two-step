@@ -4,7 +4,7 @@ export default function timer() {
   if (timers.length) {
     timers.forEach((timer) => {
       const dataDate = timer.dataset.date;
-      console.log(dataDate)
+
       const endTime = new Date(dataDate);
       let interval;
 
