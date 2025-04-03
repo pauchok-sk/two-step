@@ -1,0 +1,85 @@
+.s-course {
+  padding-top: 56px;
+  &__title {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 52px;
+    margin: 0px 0px 48px 0px;
+    @include laptop-min {
+      font-size: 36px;
+      line-height: normal;
+      margin-bottom: 32px;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    gap: 32px;
+  }
+  &__aside {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 415px;
+    max-height: 775px;
+    overflow-y: auto;
+    flex-shrink: 0;
+  }
+  &__item {
+    display: block;
+    width: 100%;
+    padding: 24px 16px;
+    border-radius: 12px;
+    background-color: #f3f6ff;
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease;
+    @include hover {
+      color: white;
+      background-color: var(--accent);
+      .s-course__item-num {
+        color: white;
+      }
+    }
+
+    &._active {
+      background-color: var(--accent);
+      color: white;
+      .s-course__item-num {
+        color: white;
+      }
+    }
+  }
+  &__item-head {
+    @include flex-between;
+    gap: 15px;
+    margin-bottom: 12px;
+  }
+  &__item-title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+  &__item-num {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    color: var(--accent);
+  }
+  &__item-content {
+    font-size: 16px;
+    margin: 0;
+    line-height: 20px;
+  }
+  &__main {
+    flex: 1;
+  }
+  &__mail-title {
+    margin-bottom: 16px;
+  }
+  &__content {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 24px;
+  }
+}

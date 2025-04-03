@@ -53,16 +53,33 @@
             }));
         }));
     }
-    function faqAll() {
+    function faqToggle() {
         const btn = document.querySelector(".s-faq__more-btn");
         if (btn) {
-            const spollers = document.querySelectorAll(".s-faq__spoller");
-            spollers.forEach(((s, index) => {
-                if (index > 4) s.style.display = "none";
-            }));
+            const spollersDom = document.querySelectorAll(".s-faq__spoller");
+            const spollers = Array.from(spollersDom).splice(4, spollersDom.length);
+            spollers.forEach((s => s.style.display = "none"));
             btn.addEventListener("click", (() => {
-                spollers.forEach((s => s.style.display = "block"));
-                btn.remove();
+                if (btn.classList.contains("_active")) {
+                    spollers.forEach((s => s.style.display = "none"));
+                    btn.classList.remove("_active");
+                    btn.textContent = "Чи є протипоказання?";
+                } else {
+                    spollers.forEach((s => s.style.display = "block"));
+                    btn.classList.add("_active");
+                    btn.textContent = "Сховавши";
+                }
+            }));
+        }
+    }
+    function headerScroll() {
+        const header = document.querySelector(".header");
+        if (header) {
+            let lastScrollTop = 0;
+            window.addEventListener("scroll", (() => {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop > lastScrollTop) header.classList.add("_hide"); else header.classList.remove("_hide");
+                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
             }));
         }
     }
@@ -321,5 +338,6 @@
     timer();
     anchors_anchor();
     sliders();
-    faqAll();
+    headerScroll();
+    faqToggle();
 })();

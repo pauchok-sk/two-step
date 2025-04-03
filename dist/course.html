@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Two Step</title>
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&_v=20250403175041" rel="stylesheet" />
+	<link rel="stylesheet" href="./files/css/fancybox.min.css?_v=20250403175041" />
+	<link rel="stylesheet" href="./files/css/swiper.min.css?_v=20250403175041" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20250403175041" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="body">
+	<header class="header">
+		<div class="container header__container">
+			<a href="/" class="header__logo">
+				<img src="img/logo.svg" alt="logo" class="header__logo-img" />
+			</a>
+			<nav class="header__nav">
+				<ul class="list header__list">
+					<li><a href="#about" data-anchor>Про курс</a></li>
+					<li><a href="#mentors" data-anchor>Про нас</a></li>
+					<li><a href="#reviews" data-anchor>Відгуки</a></li>
+				</ul>
+			</nav>
+			<div class="header__right">
+				<ul class="list header__social">
+					<li>
+						<a href="#" target="_blank" class="header__social-btn">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-inst"></use>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#" target="_blank" class="header__social-btn">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#icon-tg"></use>
+							</svg>
+						</a>
+					</li>
+				</ul>
+				<button data-fancybox data-src="#modal-login" class="button">Вхід</button>
+				<div class="header__burger-btn" id="burger-open">
+					<svg>
+						<use xlink:href="img/icons/icons.svg#icon-burger"></use>
+					</svg>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="burger" id="burger">
+		<div class="burger__head">
+			<a href="/" class="burger__logo">
+				<img src="img/logo.svg" alt="logo" class="burger__logo-img" />
+			</a>
+			<button class="btn-reset burger__close" id="burger-close">
+				<svg>
+					<use xlink:href='img/icons/icons.svg#icon-close'></use>
+				</svg>
+			</button>
+		</div>
+		<ul class="list burger__list">
+			<li><a href="#about" data-anchor>Про курс</a></li>
+			<li><a href="#mentors" data-anchor>Про нас</a></li>
+			<li><a href="#reviews" data-anchor>Відгуки</a></li>
+		</ul>
+		<ul class="list burger__social">
+			<li>
+				<a href="#" target="_blank" class="burger__social-btn">
+					<svg>
+						<use xlink:href="img/icons/icons.svg#icon-inst"></use>
+					</svg>
+				</a>
+			</li>
+			<li>
+				<a href="#" target="_blank" class="burger__social-btn">
+					<svg>
+						<use xlink:href="img/icons/icons.svg#icon-tg"></use>
+					</svg>
+				</a>
+			</li>
+		</ul>
+		<button data-fancybox data-src="#modal-login" class="button burger__btn-login">Вхід</button>
+	</div>
+	<div class="burger-overlay" id="burger-overlay"></div>
+
+	<main>
+
+		<section class="s-course">
+			<div class="container">
+				<h1 class="s-course__title">Ваш курс – Two Step to Fit</h1>
+				<div class="s-course__wrapper">
+					<aside class="s-course__aside _scrollbar">
+						<a href="#" class="s-course__item">
+							<div class="s-course__item-head">
+								<div class="s-course__item-title">Основи нутріціології</div>
+								<div class="s-course__item-num">01</div>
+							</div>
+							<p class="s-course__item-content">
+								розбираємося в головних принципах здорового харчування.
+							</p>
+						</a>
+						<a href="#" class="s-course__item">
+							<div class="s-course__item-head">
+								<div class="s-course__item-title">Побудова раціону</div>
+								<div class="s-course__item-num">02</div>
+							</div>
+							<p class="s-course__item-content">
+								як скласти збалансоване меню для різних цілей.
+							</p>
+						</a>
+						<a href="#" class="s-course__item">
+							<div class="s-course__item-head">
+								<div class="s-course__item-title">Тренування та харчування</div>
+								<div class="s-course__item-num">03</div>
+							</div>
+							<p class="s-course__item-content">
+								як поєднувати спорт і дієту для максимального результату.
+							</p>
+						</a>
+						<a href="#" class="s-course__item">
+							<div class="s-course__item-head">
+								<div class="s-course__item-title">Міфи про харчування</div>
+								<div class="s-course__item-num">04</div>
+							</div>
+							<p class="s-course__item-content">
+								розвінчуємо популярні помилки у фітнесі та нутріціології.
+							</p>
+						</a>
+						<a href="#" class="s-course__item">
+							<div class="s-course__item-head">
+								<div class="s-course__item-title">Індивідуальний підхід</div>
+								<div class="s-course__item-num">05</div>
+							</div>
+							<p class="s-course__item-content">
+								як адаптувати програму під потреби кожного клієнта.
+							</p>
+						</a>
+						<a href="#" class="s-course__item">
+							<div class="s-course__item-head">
+								<div class="s-course__item-title">Індивідуальний підхід</div>
+								<div class="s-course__item-num">05</div>
+							</div>
+							<p class="s-course__item-content">
+								як адаптувати програму під потреби кожного клієнта.
+							</p>
+						</a>
+						<a href="#" class="s-course__item">
+							<div class="s-course__item-head">
+								<div class="s-course__item-title">Індивідуальний підхід</div>
+								<div class="s-course__item-num">05</div>
+							</div>
+							<p class="s-course__item-content">
+								як адаптувати програму під потреби кожного клієнта.
+							</p>
+						</a>
+						<a href="#" class="s-course__item">
+							<div class="s-course__item-head">
+								<div class="s-course__item-title">Індивідуальний підхід</div>
+								<div class="s-course__item-num">05</div>
+							</div>
+							<p class="s-course__item-content">
+								як адаптувати програму під потреби кожного клієнта.
+							</p>
+						</a>
+						<a href="#" class="s-course__item">
+							<div class="s-course__item-head">
+								<div class="s-course__item-title">Індивідуальний підхід</div>
+								<div class="s-course__item-num">05</div>
+							</div>
+							<p class="s-course__item-content">
+								як адаптувати програму під потреби кожного клієнта.
+							</p>
+						</a>
+					</aside>
+					<div class="s-course__main">
+						<h3 class="t-title s-course__main-title">
+							Нутріціолог і Тренер: Дует для Здоров’я та Форми
+						</h3>
+						<p class="s-course__main-content">
+							Дізнайтеся, як поєднання знань нутріціолога та тренера допомагає
+							досягати максимальних результатів у здоров’ї та фітнесі. Розберемося в
+							основах харчування, ефективних тренуваннях та створенні
+							індивідуального підходу для кожного клієнта.
+						</p>
+
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/o9WOMWwWjko?si=TzPNcMpRVusqyPj2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+	</main>
+	<footer class="footer">
+		<div class="container footer__container">
+			<div class="footer__main">
+				<a href="/" class="footer__logo">
+					<img src="img/logo-white.svg" alt="logo" class="footer__logo-img" />
+				</a>
+				<p class="footer__main-content">
+					два кроки до стрункого, здорового тіла!
+				</p>
+				<button data-fancybox data-src="#modal-login" class="button _outline-white">
+					Зареєструватися
+				</button>
+			</div>
+			<nav class="footer__nav">
+				<div class="footer__nav-item">
+					<h5 class="footer__nav-title">Навігація</h5>
+					<ul class="list footer__nav-list">
+						<li><a href="#about" data-anchor>Про курс</a></li>
+						<li><a href="#mentors" data-anchor>Про нас</a></li>
+						<li><a href="#reviews" data-anchor>Відгуки</a></li>
+					</ul>
+				</div>
+				<div class="footer__nav-item">
+					<h5 class="footer__nav-title">Юридична інформація</h5>
+					<ul class="list footer__nav-list">
+						<li><a href="#">Політика конфіденційності</a></li>
+						<li><a href="#">Правила користування сайтом</a></li>
+					</ul>
+				</div>
+				<div class="footer__nav-item">
+					<h5 class="footer__nav-title">Зв'язатися з нами</h5>
+					<a href="mailto:hello@.me" class="footer__mail">hello@.me</a>
+					<ul class="list footer__social">
+						<li>
+							<a href="#" target="_blank" class="footer__social-btn">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-inst"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" target="_blank" class="footer__social-btn">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-tg"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</footer>
+
+	<div class="modal tab-container" id="modal-login">
+		<button data-fancybox-close class="btn-reset modal__close">
+			<svg>
+				<use xlink:href="img/icons/icons.svg#icon-close"></use>
+			</svg>
+		</button>
+		<div data-tab="login">
+			<h3 class="t-title modal__title">Зареєструватися</h3>
+			<form action="#" class="modal__form">
+				<div class="modal__form-item">
+					<input type="text" placeholder="Имя" class="input" />
+				</div>
+				<div class="modal__form-item">
+					<input type="email" placeholder="Email" class="input" />
+				</div>
+				<div class="modal__form-item">
+					<input type="password" placeholder="Пароль" class="input" />
+				</div>
+				<button class="button modal__form-btn">Зареєструватися</button>
+			</form>
+			<div class="modal__bottom-content">
+				Вже є акаунт <span data-tab-btn="reg">Увійти</span>
+			</div>
+		</div>
+		<div data-tab="reg" class="_open">
+			<h3 class="t-title modal__title">Увійти</h3>
+			<form action="#" class="modal__form">
+				<div class="modal__form-item">
+					<input type="email" placeholder="Email" class="input" />
+				</div>
+				<div class="modal__form-item">
+					<input type="password" placeholder="Пароль" class="input" />
+				</div>
+				<button class="button modal__form-btn">Увійти</button>
+			</form>
+			<div class="modal__bottom-content">
+				Немає аккаунта? <span data-tab-btn="login">Зареєструватися</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal _big" id="modal-mentor-1">
+		<button data-fancybox-close class="btn-reset modal__close">
+			<svg>
+				<use xlink:href="img/icons/icons.svg#icon-close"></use>
+			</svg>
+		</button>
+		<div class="mentor">
+			<img src="img/mentor-1.jpg" alt="image" class="mentor__img" />
+			<div class="mentor__info">
+				<h3 class="t-title mentor__title">
+					Привіт! Я Ірина Березюк, сертифікований нутриціолог
+				</h3>
+				<ul class="list mentor__list">
+					<li class="mentor__item">
+						<span class="mentor__item-circle">1</span>
+						Я навчалася і досі продовжую це робити, в Академії dr Толстікової. Там
+						я здобула глибокі знання про нутриціологію та всю роботу організму.
+					</li>
+					<li class="mentor__item">
+						<span class="mentor__item-circle">2</span>
+						Але насправді мій шлях почався 10 років тому, коли я завагітніла, я
+						почала досліджувати, як харчування впливає на здоров’я, і тоді
+						зрозуміла: правильне харчування — це не просто про їжу, а про якість
+						життя
+					</li>
+					<li class="mentor__item">
+						<span class="mentor__item-circle">3</span>
+						З роками я ще більше заглибилася в нутріціологію, здобула освіту в цій
+						сфері та зрозуміла головне: універсальних схем не існує. Кожен
+						організм унікальний, і важливо знайти свій баланс.
+					</li>
+					<li class="mentor__item">
+						<span class="mentor__item-circle">4</span>
+						Я допомогла сотням людей схуднути, покращити стан тіла, навчитися
+						поєднувати харчування та спорт і віднайти баланс між здоров’ям,
+						фігурою та самопочуттям.
+					</li>
+					<li class="mentor__item">
+						<span class="mentor__item-circle">5</span>
+						Правильне харчування — це не тільки про цифри на вагах. Це про
+						енергію, здоров’я, гармонію з тілом та любов до себе. Якщо ви хочете
+						знайти свій ідеальний шлях без жорстких обмежень — я допоможу
+					</li>
+				</ul>
+				<div class="mentor__footer">
+					<h5 class="mentor__social-title">Мои соцсети</h5>
+					<ul class="list mentor__socials">
+						<li>
+							<a href="#" target="_blank">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-inst"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" target="_blank">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-tg"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./files/js/fancybox.min.js?_v=20250403175041"></script>
+	<script src="./files/js/countdown.min.js?_v=20250403175041"></script>
+	<script src="./files/js/swiper.min.js?_v=20250403175041"></script>
+	<script src="js/app.min.js?_v=20250403175041"></script>
+</body>
+
+</html>

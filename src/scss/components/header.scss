@@ -4,6 +4,10 @@
   padding: 16px 0px;
   background-color: white;
   z-index: 100;
+  transition: transform .4s ease;
+  &._hide {
+    transform: translateY(-85px);
+  }
   @include tablet {
     padding: 20px 0px;
   }
