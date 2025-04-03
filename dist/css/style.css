@@ -1349,6 +1349,19 @@ body {
   flex-shrink: 0;
   max-width: 100%
 }
+.s-course__aside-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: #000;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 100;
+  transition: opacity .4s ease,visibility .4s ease
+}
+.s-course__aside-overlay._active {
+  opacity: .5;
+  visibility: visible
+}
 .s-course__item {
   display: block;
   width: 100%;
@@ -1802,6 +1815,9 @@ body {
     line-height: 40px;
     margin-bottom: 12px
   }
+  .s-course {
+    padding-top: 30px
+  }
   .footer__nav {
     gap: 32px;
     flex-direction: column
@@ -1860,6 +1876,9 @@ body {
   }
   .s-faq__more-btn {
     width: 100%
+  }
+  .s-course__main-video {
+    height: 250px
   }
 }
 @media (any-hover:hover) {

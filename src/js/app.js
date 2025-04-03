@@ -21,3 +21,7 @@ anchor();
 sliders();
 headerScroll();
 faqToggle();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const player = new Plyr("#player");
+});

@@ -1,5 +1,8 @@
 .s-course {
   padding-top: 56px;
+  @include tablet {
+    padding-top: 30px;
+  }
   &__title {
     font-size: 48px;
     font-weight: 600;
@@ -44,6 +47,19 @@
       &._open {
         transform: translateX(0);
       }
+    }
+  }
+  &__aside-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: black;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 100;
+    transition: opacity .4s ease, visibility .4s ease;
+    &._active {
+      opacity: 0.5;
+      visibility: visible;
     }
   }
   &__item {
@@ -122,6 +138,9 @@
     background-color: var(--accent-l);
     @include laptop-middle {
       height: 350px;
+    }
+    @include mobile {
+      height: 250px;
     }
   }
 }

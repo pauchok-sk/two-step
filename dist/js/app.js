@@ -340,4 +340,7 @@
     sliders();
     headerScroll();
     faqToggle();
+    document.addEventListener("DOMContentLoaded", (() => {
+        new Plyr("#player");
+    }));
 })();

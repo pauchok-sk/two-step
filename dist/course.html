@@ -8,10 +8,11 @@
 	<link rel="shortcut icon" href="favicon.ico" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&_v=20250404020852" rel="stylesheet" />
-	<link rel="stylesheet" href="./files/css/fancybox.min.css?_v=20250404020852" />
-	<link rel="stylesheet" href="./files/css/swiper.min.css?_v=20250404020852" />
-	<link rel="stylesheet" href="css/style.min.css?_v=20250404020852" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&_v=20250404023348" rel="stylesheet" />
+	<link rel="stylesheet" href="./files/css/fancybox.min.css?_v=20250404023348" />
+	<link rel="stylesheet" href="./files/css/swiper.min.css?_v=20250404023348" />
+	<link rel="stylesheet" href="./files/css/plyr.min.css?_v=20250404023348" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20250404023348" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
@@ -180,6 +181,7 @@
 							</p>
 						</a>
 					</aside>
+					<div class="s-course__aside-overlay"></div>
 					<div class="s-course__main">
 						<h3 class="t-title s-course__main-title">
 							Нутріціолог і Тренер: Дует для Здоров’я та Форми
@@ -191,9 +193,22 @@
 							індивідуального підходу для кожного клієнта.
 						</p>
 
-						<div class="s-course__main-video">
-							<iframe width="100%" height="100%" src="https://www.youtube.com/embed/o9WOMWwWjko?si=TzPNcMpRVusqyPj2?modestbranding=1&controls=0&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-						</div>
+						<video id="player" playsinline controls data-poster="img/about-preview.jpg" class="s-course__main-video">
+							<iframe width="100%" height="100%" src="https://www.youtube.com/embed/o9WOMWwWjko?si=TzPNcMpRVusqyPj2?modestbranding=1&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+						</video>
+
+						<!-- <div class="s-course__main-video">
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/o9WOMWwWjko?si=TzPNcMpRVusqyPj2?modestbranding=1&rel=0"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div> -->
 					</div>
 				</div>
 			</div>
@@ -362,10 +377,11 @@
 		</div>
 	</div>
 
-	<script src="./files/js/fancybox.min.js?_v=20250404020852"></script>
-	<script src="./files/js/countdown.min.js?_v=20250404020852"></script>
-	<script src="./files/js/swiper.min.js?_v=20250404020852"></script>
-	<script src="js/app.min.js?_v=20250404020852"></script>
+	<script src="./files/js/fancybox.min.js?_v=20250404023348"></script>
+	<script src="./files/js/countdown.min.js?_v=20250404023348"></script>
+	<script src="./files/js/swiper.min.js?_v=20250404023348"></script>
+	<script src="./files/js/plyr.min.js?_v=20250404023348"></script>
+	<script defer src="js/app.min.js?_v=20250404023348"></script>
 </body>
 
 </html>
