@@ -1,8 +1,15 @@
 ._scrollbar {
   padding-right: 24px;
 
+  @include laptop-middle {
+    padding-right: 6px;
+  }
+
   &::-webkit-scrollbar {
     width: 8px;
+    @include laptop-middle {
+      width: 4px;
+    }
   }
 
   &::-webkit-scrollbar-track {
