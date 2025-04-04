@@ -45,4 +45,14 @@
       color: var(--accent);
     }
   }
+  &._outline-accent {
+    background-color: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    box-shadow: none !important;
+    @include hover {
+      background-color: var(--accent);
+      color: white;
+    }
+  }
 }

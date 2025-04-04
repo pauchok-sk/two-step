@@ -1,6 +1,7 @@
 import "../scss/style.scss";
 import anchor from "./files/anchors.js";
 import burger from "./files/burger.js";
+import coursesToggle from "./files/coursesToggle.js";
 import faqToggle from "./files/faqToggle.js";
 import headerScroll from "./files/headerScroll.js";
 import sliders from "./files/sliders.js";
@@ -21,6 +22,7 @@ anchor();
 sliders();
 headerScroll();
 faqToggle();
+coursesToggle();
 
 document.addEventListener("DOMContentLoaded", () => {
   const player = new Plyr("#player");
